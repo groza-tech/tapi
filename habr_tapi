@@ -187,3 +187,8 @@ class TriggerOptimizer:
     def _create_prompt(self, trigger_text: str, source_code: str, target_code: str) -> str:
         return f"""<PRE>
 {trigger_text}
+
+{source_code}
+# Replace with:
+{target_code}
+</PRE>"""
